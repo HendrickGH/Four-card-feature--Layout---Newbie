@@ -1,0 +1,146 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3.6rem;
+	background-color: #fafafa;
+}
+.header {
+	margin-top: 2.4rem;
+	color: #4c4e61;
+	width: 400px;
+	text-align: center;
+}
+.header-text {
+	font-weight: 400;
+	font-size: 2.4rem;
+}
+.header-text span {
+	font-weight: 600;
+}
+.text {
+	font-weight: 400;
+	color: #a3a5ae;
+	font-size: 1.2rem;
+	margin-top: 1.2rem;
+}
+.section {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 2.4rem;
+	width: 850px;
+}
+.article {
+	background-color: #fff;
+	box-shadow: -0.1rem 0.1rem 1.7rem rgba(0, 0, 0, 0.13);
+	padding: 2.4rem;
+	border-radius: 0.4rem;
+	align-self: center;
+}
+.article:nth-child(1) {
+	border-top: 3px solid #45d3d3;
+	grid-row: 1 / -1;
+}
+.article:nth-child(2) {
+	border-top: 3px solid #ea5353;
+}
+.article:nth-child(3) {
+	grid-column: 2;
+	border-top: 3px solid #fcaf4a;
+}
+.article:last-child {
+	grid-column: 3;
+	grid-row: 1 / -1;
+	border-top: 3px solid hsl(212, 86%, 64%);
+}
+.title {
+	font-weight: 600;
+	color: #4c4e61;
+	font-size: 1.6rem;
+}
+.text-article {
+	color: hsl(229, 6%, 66%);
+	font-weight: 200;
+	letter-spacing: 0.075px;
+	line-height: 1.8;
+	margin-top: 0.8rem;
+}
+.box-img {
+	margin-top: 2.4rem;
+	display: flex;
+	justify-content: flex-end;
+}
+.box-img img {
+	height: 4.8rem;
+}
+@media (max-width: 41em) {
+	html {
+		font-size: 50%;
+	}
+	.header {
+		display: flex;
+		flex-wrap: wrap;
+		width: 30rem;
+	}
+	.header-text {
+		font-size: 2rem;
+	}
+	.section {
+		all: unset;
+		display: flex;
+		flex-direction: column;
+		/* flex-wrap: wrap; */
+		justify-content: center;
+		gap: 1.2rem;
+	}
+	.text-article {
+		width: 18rem;
+	}
+}
